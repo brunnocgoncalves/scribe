@@ -43,6 +43,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                         
                         let sound = try AVAudioPlayer(contentsOf: path)
                         self.audioPlayer = sound
+                        self.audioPlayer.delegate = self
                         sound.play()
                         
                     } catch{
