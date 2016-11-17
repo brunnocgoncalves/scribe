@@ -39,34 +39,48 @@
                                     <constraint firstAttribute="height" constant="55" id="MKt-vX-9fo"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjE-iV-Cnz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjE-iV-Cnz" customClass="CircleButton" customModule="Scribe" customModuleProvider="target">
                                 <rect key="frame" x="130" y="346" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.85882352941176465" green="0.10980392156862745" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="EAR-OD-eNx"/>
                                     <constraint firstAttribute="width" constant="60" id="uX7-7T-5Ue"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play &amp; Transcribe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="3ZH-AM-BdB">
-                                <rect key="frame" x="40" y="424" width="240.5" height="36"/>
+                                <rect key="frame" x="39.5" y="424" width="241" height="36"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="biQ-4I-DTP">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tap the button to transcripe the audio embedded. The text will apper over here!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="biQ-4I-DTP">
                                 <rect key="frame" x="20" y="63" width="288" height="275"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="wLt-On-v0b">
+                                <rect key="frame" x="130.5" y="346.5" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9ZN-6f-oyq"/>
+                                    <constraint firstAttribute="width" constant="60" id="KxL-vp-RVa"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wLt-On-v0b" firstAttribute="centerX" secondItem="IjE-iV-Cnz" secondAttribute="centerX" id="1Zq-uq-XUQ"/>
                             <constraint firstItem="biQ-4I-DTP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="6Sz-gv-GNE"/>
                             <constraint firstItem="IjE-iV-Cnz" firstAttribute="top" secondItem="biQ-4I-DTP" secondAttribute="bottom" constant="8" id="6dI-Ph-cc6"/>
                             <constraint firstAttribute="trailing" secondItem="Rhz-or-bL5" secondAttribute="trailing" id="7XS-W1-pvm"/>
                             <constraint firstItem="3ZH-AM-BdB" firstAttribute="top" secondItem="IjE-iV-Cnz" secondAttribute="bottom" constant="18" id="DXL-Vt-6xM"/>
+                            <constraint firstItem="wLt-On-v0b" firstAttribute="centerY" secondItem="IjE-iV-Cnz" secondAttribute="centerY" id="Ebd-RP-qNj"/>
                             <constraint firstItem="biQ-4I-DTP" firstAttribute="top" secondItem="Rhz-or-bL5" secondAttribute="bottom" constant="8" id="Ifo-h8-PUI"/>
                             <constraint firstItem="Rhz-or-bL5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NM6-WI-c0Q"/>
                             <constraint firstItem="Rhz-or-bL5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="TsZ-5X-Z1p"/>
